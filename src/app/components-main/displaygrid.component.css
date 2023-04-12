@@ -1,0 +1,265 @@
+* {
+    font-family: 'Raleway';
+}
+
+
+.grid-wrapper{
+    height: 90%;
+    width: 100%;
+}
+
+.grid {
+    display: inline-block;
+    position: relative;
+    left: calc(50% - 403px);
+    max-width: 806px;
+    max-height: 596px;
+    height: fit-content;
+    margin-top: 30px;
+    margin-bottom: 300px;
+    border-radius: 22px;
+    border-style: solid;
+    border-width: 2px;
+    border-color: #b4c5b5;
+    overflow: hidden;
+}
+
+.row {
+    display: inline-flex;
+    width: 800px;
+    padding: 0; margin: 0;
+    position: relative;
+    left: -1px;
+}
+
+.col-item {
+    width: 33px;
+    height: 33px;
+    background-color: #b4c5b5;
+    margin: 1px;
+    border-radius: 1px;
+}
+
+.col-item-wall {
+    width: 33px;
+    height: 33px;
+    background-color: #465c6e;
+    opacity: 65%;
+    margin: 1px;
+    border-radius: 1px;
+}
+
+.col-item-start-point{
+    width: 33px;
+    height: 33px;
+    margin: 1px;
+    border-radius: 1px;
+    background-color: #7b2f30;
+    opacity: 65%;
+}
+
+.col-item-queue-item {
+    width:  33px;
+    height:  33px;
+    margin:  1px;
+    border-radius:  1px;
+    background-color: #486E46;
+    opacity: 65%;
+}
+
+.col-item-end-point{
+    width: 33px;
+    height: 33px;
+    margin: 1px;
+    border-radius: 1px;
+    background-color: #cc713f;
+    opacity: 65%;
+    
+}
+
+.col-item-path{
+    width: 33px;
+    height: 33px;
+    margin: 1px;
+    border-radius: 1px;
+    background-color: #add8e6;
+    opacity: 50%;
+}
+
+.col-item-path-2{
+    width: 33px;
+    height: 33px;
+    margin: 1px;
+    border-radius: 1px;
+    background-color: white;
+    opacity: 50%;
+}
+
+.col-item:hover{
+    background-color: #d0d0d3;
+   
+}
+
+.col-item-thinking{
+    width: 33px;
+    height: 33px;
+    margin: 1px;
+    border-radius: 1px;
+    background-color: #6C466E;
+    opacity: 50%;
+}
+
+.col-item-open-set {
+    width: 33px;
+    height: 33px;
+    margin: 1px;
+    border-radius: 1px;
+    background-color: blue;
+    opacity: 50%;
+}
+
+.col-item-closed-set {
+    width: 33px;
+    height: 33px;
+    margin: 1px;
+    border-radius: 1px;
+    background-color: red;
+    opacity: 50%;
+}
+
+.extra-border {
+    width: 100%;
+    overflow: hidden;
+    border-radius: 29px;
+}
+
+
+.header-container {
+    width: 100%;
+    display: flex;
+    background-color: rgb(197, 180, 196, .65);
+}
+
+.navbar-container{
+    position: relative;
+    left: 50px;
+    display: flex;
+    height: 60px;
+    top: 18px;
+    width: calc(100% - 300px);
+}
+
+.options {
+ background-color: white;
+ width: 170px;
+ padding-top: 4px;
+ text-align: center;
+ border-radius: 12px;
+}
+
+.options label {
+    font-size: 14px;
+}
+
+#gridMode{
+    margin-top: 5px;
+    border-radius: 6px;
+    border-style: none;
+    height: 19px;
+    padding-left: 9px;
+}
+
+#gridMode:hover{
+    background-color: #d0d0d7;
+}
+
+.sort-button-container{
+    position: absolute;
+    height: 100%;
+    right: 39px;
+}
+
+.grabGrid {
+    margin-top: 16px;
+    height: 32px;
+    width: 70px;
+    background-color: white;
+    border-style: solid;
+    border-radius: 3px;
+    border-color: grey;
+    border-width: 1px;
+}
+
+.grabGrid:hover{
+    background-color: rgb(180, 197, 181, .65);
+}
+
+.instructions-container {
+    background-color: white;
+    position: relative;
+    left: 27px;
+    border-radius: 20px;
+    border-width: 6px;
+    border-style: solid;
+    border-color:rgb(197, 180, 196, .65);
+    
+}
+
+.instructions {
+    border-style: solid;
+    border-width: 2px;
+    border-color: rgb(197, 180, 196, .25);
+    height: 100px;
+    padding: 6px;
+    padding-top: 3px;
+    border-radius: 12px;
+}
+
+.instructions p{
+    font-size: 15px;
+    padding: 2px;
+}
+
+.algChoice-container{
+    background-color:  white;
+    border-radius: 15px;
+    margin-left: 25px;
+    width:  300px;
+    display:  flex;
+    text-align: center;
+}
+
+.dij{
+    margin-left: 12px;
+    padding-top: 18px;
+}
+
+.as{
+    margin-left: 12px;
+    padding-top: 18px;
+}
+
+.algType{
+    position:  relative;
+    top: 2px;
+    margin-left: 9px;
+    height: 15px;
+    width: 24.3px;
+    background-color: #d3d3d3;
+    border-radius: 4px;
+    border-style:  none;
+    accent-color:  #d3d3d3;
+}
+
+.algType:hover{
+    background-color: rgb(180, 197, 181, .65);
+}
+
+
+
+
+
+
+
+
+

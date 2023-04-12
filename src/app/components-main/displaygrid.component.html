@@ -1,0 +1,63 @@
+<!--Header container-->
+<div class="header-container">
+    <!--Instructions container-->
+    <div class="instructions-container">
+        <div class="instructions">
+            <p style="text-align: center"><i>Basics</i></p>
+            <p>1. Place a start/end-point</p>
+            <p>2. Place some walls &lt;optional&gt;</p>
+            <p>3. Pick an algorithm and hit sort</p>
+        </div>
+    </div>
+    <!--Navbar container-->
+    <div class="navbar-container">
+        <div class="options">
+            <label for="gridMode">Draw Mode</label>
+            <br>
+            <select #val id="gridMode" (change)="changeGridMode(val.value)">
+                <option></option>
+                <option id="mode[]" value="draw-wall" (click)="setDrawMode()">Draw square</option>
+                <option id="mode[]" value="erase-wall" (click)="setEraseMode()">Erase square</option>
+                <option id="mode[]" value="start-point" (click)="setStartPointMode()">Place start point</option>
+                <option id="mode[]" value="end-point" (click)="setEndPointMode()">Place end point</option>
+            </select>
+            <input style="display:none" id="startInfo">
+            <input style="display:none" id="endInfo">
+        </div>
+        <div class="algChoice-container">
+            <div class="dij">
+                <label>Dijkstra's</label>
+                <input id="dij" name="algChoice" class="algType" type="radio" (click)="setAlgModeDij()"/>
+            </div>
+            <div class="as">
+                <label>A Star*</label>
+                <input id="as" name="algChoice" class="algType" type="radio" (click)="setAlgModeA()"/>
+            </div>
+        </div>
+        <div class="sort-button-container">
+            <button class="grabGrid" name="getAll" (click)="startAlg()">Sort</button>
+        </div>
+    </div>
+</div>
+<!--Grid container-->
+<div class="grid-wrapper" (mousedown)="setMouseDown()" (mouseup)="setMouseUp()" >
+    <div class="grid">  
+        <div class="extra-border">
+        <table ondragstart="return false;" class="grid-container">
+            <tr class="row" *ngFor="let currRow of rows; let i = index;">
+                <td class="col-item" id="{{j}}-{{i}}" *ngFor="let currCol of cols; let j = index;" (click)="setStartPoint(j, i)" (click)="setEndPoint(j, i)">
+                    <app-gridsquare [x]="j" [y]="i" [curr]="currMouseState" [mode]="this.currMode" (click)="setStartPoint(j, i)" (click)="setEndPoint(j, i)" (mouseover)="test()"></app-gridsquare>
+                    <input class="gridItem" style="display:none" name="item{{j}}-{{i}}" id="item{{j}}-{{i}}" value="notAssigned"> 
+                </td>
+            </tr>
+        </table>
+    </div>
+    </div>
+</div>
+
+
+
+
+
+
+
